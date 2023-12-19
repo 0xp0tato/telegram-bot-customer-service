@@ -52,7 +52,7 @@ bot.on("message", async (msg) => {
   };
 
   if (userMessage.startsWith("/"))
-    response = await handleCommand(requestObject);
+    response = await handleCommand(requestObject, bot, chatId);
 
   await updateHistory(userId, timeStamp, userMessage, response);
 
