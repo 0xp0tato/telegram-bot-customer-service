@@ -4,6 +4,10 @@ const UserSchema = new mongoose.Schema({
   userId: Number,
   firstName: String,
   username: String,
+  isStarted: {
+    type: Boolean,
+    default: false,
+  },
   commands: [
     {
       timeStamp: Date,
